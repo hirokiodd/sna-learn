@@ -2609,6 +2609,33 @@ files = [
 ]
 
 [[package]]
+name = "rpy2"
+version = "3.5.15"
+description = "Python interface to the R language (embedded R)"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "rpy2-3.5.15-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:fe79e2c18e12c8d16d12e97284981bcafa79c41c806cbeab348a473f151a5926"},
+    {file = "rpy2-3.5.15-cp311-cp311-macosx_10_9_universal2.whl", hash = "sha256:7bcf246ba64a2f3fb38cc3351c564897cc54d4677b2ee88e602fb0b5a2fda3fe"},
+    {file = "rpy2-3.5.15-cp38-cp38-macosx_11_0_x86_64.whl", hash = "sha256:44626e99a038542d6bd11c32282841211e308f6ca9a08269b6b80fb25b0a32ab"},
+    {file = "rpy2-3.5.15-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:44ce27ab59204fa78dd18eed0609c620c64a07f70b653d5276c8bba9025d7d1e"},
+    {file = "rpy2-3.5.15.tar.gz", hash = "sha256:444fae4a84dc7f233b70eaab0aa81398ee0147c4e1ae38dd4524d779d6f25b2b"},
+]
+
+[package.dependencies]
+cffi = ">=1.10.0"
+jinja2 = "*"
+packaging = {version = "*", markers = "platform_system == \"Windows\""}
+tzlocal = "*"
+
+[package.extras]
+all = ["ipython", "numpy", "pandas (>=1.3.5)", "pytest"]
+pandas = ["numpy", "pandas (>=1.3.5)"]
+test = ["ipython", "numpy", "pandas (>=1.3.5)", "pytest"]
+test-minimal = ["coverage", "pytest", "pytest-cov"]
+types = ["mypy", "types-tzlocal"]
+
+[[package]]
 name = "scikit-learn"
 version = "1.4.0"
 description = "A set of python modules for machine learning and data mining"
@@ -2922,6 +2949,23 @@ files = [
 ]
 
 [[package]]
+name = "tzlocal"
+version = "5.2"
+description = "tzinfo object for the local timezone"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "tzlocal-5.2-py3-none-any.whl", hash = "sha256:49816ef2fe65ea8ac19d19aa7a1ae0551c834303d5014c6d5a62e4cbda8047b8"},
+    {file = "tzlocal-5.2.tar.gz", hash = "sha256:8d399205578f1a9342816409cc1e46a93ebd5755e39ea2d85334bea911bf0e6e"},
+]
+
+[package.dependencies]
+tzdata = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+devenv = ["check-manifest", "pytest (>=4.3)", "pytest-cov", "pytest-mock (>=3.3)", "zest.releaser"]
+
+[[package]]
 name = "uri-template"
 version = "1.3.0"
 description = "RFC 6570 URI Template Processor"
@@ -3008,4 +3052,4 @@ test = ["websockets"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "341bd4bfaffd1794a21d0338c70509b137e912ce6144b86fe391c8e6393c8bcf"
+content-hash = "05d55f0d774d19ea788410be059f7385cbc32f33c0e11ca5d5be5b0e45606aa4"
